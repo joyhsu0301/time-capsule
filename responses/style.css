@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'financier_medium';
+	src: url('../fonts/test-financier-display-medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'calibre_regular';
+	src: url('../fonts/test-calibre-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'calibre_medium';
+	src: url('../fonts/test-calibre-medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'founders_medium';
+	src: url('../fonts/test-founders-grotesk-mono-medium.woff') format('woff');
+}
+@keyframes bgcolor {
+    0% {
+        background-color: #ebfafa
+    }
+
+    30% {
+        background-color: #faebf1
+    }
+
+    60% {
+        background-color: #f4ebfa
+    }
+
+    90% {
+        background-color: #ebfaf3
+    }
+
+    100% {
+        background-color: #f7faeb
+    }
+}
+body {
+	margin: 30px;
+	cursor: default;
+	-webkit-animation: bgcolor 25s infinite;
+    animation: bgcolor 15s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+	color: black;
+}
+h1 {
+	font-family: 'founders_medium';
+	font-size: 25px;
+}
+#heading {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+#date {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	text-transform: uppercase;
+}

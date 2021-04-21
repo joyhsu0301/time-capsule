@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Visitor's Log</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="icon" href="white.png">
+  </head>
+  <body>
+    
+    <h1 id="heading" class="hidden">WELCOME TO THE VISITOR'S LOG</h1>
+
+    <h1 id="date" class="hidden"></h1>
+
+    <p id="prompt" align="center">[what advice do you wish you could give to your younger self?]</p>
+
+    <div id="flexcontainer">
+      <form id="form" action="#" onsubmit="return false">
+        <textarea id="user_input" placeholder="click here to start typing"></textarea>
+        <button id="submit">[submit]</button>
+      </form>
+
+      <div class="after_sub" align="center">
+        <p id="submit2">[submit another]</p>
+        <p id="compiled2"><a id="responses_link" href="responses/responses.html">[view other responses]</a></p>
+        <p id="about2">[about this project]</p>
+      </div>
+  
+    <div id="compiled" class="hidden"><h1 id="compiled_text">RESPONSES</h1></div>
+  
+    <div id="about" class="hidden"><h1 id="about_text">ABOUT</h1></div>
+
+    <div id="popup">
+      <p id="popup_text">The Visitor's Log is an online time capsule containing advice submitted by others who have also visited this site. The prompt never changes so feel free to submit more than once.<br><br>All the submissions are anonymous.</p>
+      <p id="close_popup">&#10005;</p>
+    </div>
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+  </body>
+</html>
