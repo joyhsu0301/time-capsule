@@ -1,22 +1,3 @@
-// document.addEventListener("DOMContentLoaded", event => {
-
-// 	console.log('hi')
-
-// 	const app = firebase.app();
-// });
-
-// function googleLogin() {
-// 	const provider = new firebase.auth.GoogleAuthProvider();
-		
-// 	firebase.auth().signInWithPopup(provider)
-// 		.then(result => {
-// 			const user = result.user;
-// 			document.write('Hello ${user.displayName}');
-// 			console.log(user)
-// 		})
-// 		.catch(console.log)
-// }
-
 $(document).ready(function(){
 
 	console.log("it's working");
@@ -34,18 +15,12 @@ $(document).ready(function(){
   	firebase.initializeApp(firebaseConfig);
   	firebase.analytics();
 
-  	var firestore = firebase.firestore();
-
-  	const docRef = firestore.doc("users_input/visitorsData");
-
-  	// db.collection("users_input").doc(randomID).set({
-   //              userEntery: "putithere"
-   //          })
+  	var db = firebase.firestore();
 
   	$("#submit").click(function(){
   		const textToSave = $("#user_input").val();
   		console.log("saving " + textToSave + " to firestore");
-  		docRef.set({
+  		db.collection("users_input").add({
   			visitorsInput: textToSave
   		}).then(function(){
   			console.log("saved successfully!");
@@ -64,9 +39,11 @@ $(document).ready(function(){
       window.location.reload();
     });
 
-  //shows the date 
-	var d = new Date();
-	document.getElementById("date").innerHTML = d.toString().slice(0, 24);
+  //date
+  var interval = setInterval(function() {
+    var momentNow = moment();
+    $("#date").html(momentNow.format("ddd MMM Do YYYY, hh:mm:ss A"));
+    }, 100);
 
   //corner texts fade in
 	$(".hidden").fadeIn(1000);

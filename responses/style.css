@@ -1,8 +1,4 @@
 @font-face {
-	font-family: 'financier_medium';
-	src: url('../fonts/test-financier-display-medium.woff') format('woff');
-}
-@font-face {
 	font-family: 'calibre_regular';
 	src: url('../fonts/test-calibre-regular.woff') format('woff');
 }
@@ -48,18 +44,94 @@ h1 {
 	font-family: 'founders_medium';
 	font-size: 25px;
 }
+a {
+	text-decoration: none;
+	color: black;
+}
+.hidden {
+	display: none;
+	position: fixed;
+}
 #heading {
 	margin: 0px;
 	padding: 0px;
-	position: absolute;
 	top: 30px;
 	left: 30px;
 }
 #date {
 	margin: 0px;
 	padding: 0px;
-	position: absolute;
 	top: 30px;
 	right: 30px;
 	text-transform: uppercase;
+}
+#back {
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+	bottom: 40px;
+	left: 30px;
+}
+#about {
+	position: fixed;
+	margin: 0px;
+	padding: 0px;
+	bottom: 40px;
+	right: 30px;
+	cursor: pointer;
+}
+
+/*responses*/
+#inputs {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/*popup*/
+#popup {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #cef5f3;
+	border: 1px solid black;
+	width: 800px;
+	height: 500px;
+}
+#popup_text {
+	margin: 60px 20px 20px 20px;
+	font-family: 'founders_medium';
+	font-size: 25px;
+}
+#close_popup {
+	cursor: pointer;
+	color: red;
+	font-size: 25px;
+	position: absolute;
+	margin: 20px;
+	top: 0px;
+	left: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+	#prompt {
+		font-size: 30px;
+	}
+	#user_input {
+		width: 90vw;
+	}
+	#date {
+		visibility: hidden;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	#popup {
+		width: 75vw;
+	}
+	#popup_text {
+		font-size: 15px;
+	}
 }
