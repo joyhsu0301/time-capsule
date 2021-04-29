@@ -17,13 +17,13 @@ $(document).ready(function(){
 
 	function loadInputs(){
   		db.collection("users_input").get().then((querySnapshot) => {
-    	querySnapshot.forEach((doc) => {
-     	 	// create divs and add them to the field
-     		$("#inputs").append("<div>" + users_input.data() + "</div>")
-     		console.log(users_input.data());
-    		});
+  			querySnapshot.forEach((doc) => {
+  				let userResponse = doc.data("usersInput");
+  				console.log(userResponse);
+  			})
   		})
 	}
+
 
 	//texts fade in on load
 	$(".hidden").fadeIn(1000);

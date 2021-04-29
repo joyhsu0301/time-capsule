@@ -169,11 +169,19 @@ button:hover {
 }
 
 @media screen and (max-width: 1000px) {
+	body {
+		margin-left: 10px;
+	}
 	#prompt {
 		font-size: 30px;
 	}
 	#user_input {
+		align-content: center;
 		width: 90vw;
+		height: 60vh;
+	}
+	#submit {
+		margin-top: 200px;
 	}
 	#date {
 		visibility: hidden;
