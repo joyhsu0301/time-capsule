@@ -170,7 +170,8 @@ button:hover {
 
 @media screen and (max-width: 1000px) {
 	body {
-		margin-left: 10px;
+		margin: 30px;
+		overflow: hidden;
 	}
 	#prompt {
 		font-size: 30px;

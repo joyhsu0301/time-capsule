@@ -20,6 +20,7 @@ $(document).ready(function(){
   			querySnapshot.forEach((doc) => {
   				let userResponse = doc.data("usersInput");
   				console.log(userResponse);
+  				
   			})
   		})
 	}
