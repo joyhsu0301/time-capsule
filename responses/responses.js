@@ -18,9 +18,9 @@ $(document).ready(function(){
 	function loadInputs(){
   		db.collection("users_input").get().then((querySnapshot) => {
   			querySnapshot.forEach((doc) => {
-  				let userResponse = doc.data("usersInput");
+  				let userResponse = doc.data().visitorsInput;
   				console.log(userResponse);
-  				
+  				$("#inputs").append("<div class='notes'><p id='notes_text'>" + userResponse + "</p></div>");
   			})
   		})
 	}

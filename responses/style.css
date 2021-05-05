@@ -115,6 +115,20 @@ a {
 	left: 0px;
 }
 
+/*user inputs*/ 
+.notes {
+	width: 370px;
+	height: 450px;
+	background-image: url("white.png");
+	background-repeat: no-repeat;
+}
+#notes_text {
+	font-size: 20px;
+	font-family: 'calibre_regular';
+	position: relative;
+	margin: 80px 60px 80px 60px;
+}
+
 @media screen and (max-width: 1000px) {
 	#date {
 		visibility: hidden;
